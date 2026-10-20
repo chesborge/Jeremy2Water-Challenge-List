@@ -1,0 +1,18 @@
+{
+    "id": 57436521,
+    "name": "JFC",
+    "author": "Jeremybruhtf",
+    "creators": ["Jeremybruhtf", "chesborge"],
+    "verifier": "chesborge",
+    "verification": "https://youtu.be/AzjdJS7TPjc",
+    "percentToQualify": 67,
+    "password": "Not Copyable",
+    "records": [
+        {
+            "user": "chesborge",
+            "link": "https://youtu.be/AzjdJS7TPjc",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}

@@ -138,9 +138,15 @@ export default {
     }),
     computed: {
         level() {
+            if (!this.list || this.list.length === 0 || !this.list[this.selected]) {
+                return null;
+            }
             return this.list[this.selected][0];
         },
         video() {
+            if (!this.level) {
+                return '';
+            }
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }

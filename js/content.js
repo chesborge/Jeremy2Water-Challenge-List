@@ -1,8 +1,8 @@
 import { round, score } from './score.js';
 
 const isGitHub = window.location.hostname.includes('github.io');
-const dir = isGitHub ? '/Jeremy2Water-Challenge-List/data' : '/data';
-
+export const dir = isGitHub ? '/Jeremy2Water-Challenge-List/data' : '/data';
+export const assetDir = isGitHub ? '/Jeremy2Water-Challenge-List/assets' : '/assets';
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
     try {

@@ -136,7 +136,7 @@ export default {
         roleIconMap,
         store
     }),
-    computed: {
+ computed: {
         level() {
             if (!this.list || this.list.length === 0 || !this.list[this.selected]) {
                 return null;

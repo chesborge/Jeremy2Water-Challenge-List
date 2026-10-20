@@ -1,12 +1,7 @@
 import { round, score } from './score.js';
 
-/**
- * Path to directory containing `_list.json` and all levels
- */
-const isGitHubPages = window.location.hostname.includes('github.io');
-const repoName = window.location.pathname.split('/')[1];
-
-const dir = isGitHubPages ? `/${repoName}/data` : '/data';
+const isGitHub = window.location.hostname.includes('github.io');
+const dir = isGitHub ? '/Jeremy2Water-Challenge-List/data' : '/data';
 
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);

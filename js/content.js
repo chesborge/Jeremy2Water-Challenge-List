@@ -46,9 +46,14 @@ export async function fetchEditors() {
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    if (!list || !Array.isArray(list)) {
+        console.error("fetchLeaderboard failed: List data is missing or empty.");
+        return [[], []];
+    }
 
     const scoreMap = {};
     const errs = [];
+    
     list.forEach(([level, err], rank) => {
         if (err) {
             errs.push(err);
